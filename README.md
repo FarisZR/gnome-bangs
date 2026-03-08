@@ -4,6 +4,8 @@
 
 Bangs Search is a GNOME Shell extension that allows you to quickly search using !bangs from your GNOME search. It is inspired by DuckDuckGo's !bangs feature and includes a configurable default search engine for regular searches.
 
+It supports GNOME Shell 45 through 49.
+
 [<img src="https://raw.githubusercontent.com/andyholmes/gnome-shell-extensions-badge/master/get-it-on-ego.svg?sanitize=true" height="100">](https://extensions.gnome.org/extension/7824/bangs-search/)
 
 ## Features
@@ -30,6 +32,7 @@ Use it with the `Super` key to quickly search for anything on the web. Alternati
 To locally install and run use the Makefile:
 
 ```bash
+make test
 make install
 ```
 

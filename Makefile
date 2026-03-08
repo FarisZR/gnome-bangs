@@ -1,7 +1,7 @@
 EXTENSION_UUID = bangs-search@suvan
 EXTENSION_DIR = ~/.local/share/gnome-shell/extensions/$(EXTENSION_UUID)
 
-.PHONY: all install uninstall compile-schemas clean
+.PHONY: all install uninstall compile-schemas clean test
 
 all: compile-schemas install
 
@@ -27,6 +27,10 @@ uninstall:
 compile-schemas:
 	@echo "Compiling GSettings schemas..."
 	glib-compile-schemas schemas/
+
+test: compile-schemas
+	@echo "Validating extension metadata..."
+	@python3 validate_metadata.py
 
 clean:
 	@echo "Cleaning up compiled schemas..."
